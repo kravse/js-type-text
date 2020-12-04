@@ -32,5 +32,8 @@
   "files": [
     "index.js",
     "index.min.js"
-  ]
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
 }

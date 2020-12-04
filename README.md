@@ -10,10 +10,10 @@ npm install js-type-text
 ### Usage
 
 ```
-#import the package
+// import the package
 import jsTypeText from 'js-type-text';
 
-# in your project
+// in your project
 jsTypeText({
   text: "Your Text Here"
 }, function (result) {
