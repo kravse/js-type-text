@@ -1,6 +1,6 @@
 {
   "name": "js-type-text",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A lightweight & fun typing animation built with vanilla JavaScript. Framework agnostic so it works with Vue.js, React, and everything else.",
   "main": "index",
   "homepage": "https://github.com/kravse/js-type-text",
@@ -32,8 +32,5 @@
   "files": [
     "index.js",
     "index.min.js"
-  ],
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  }
+  ]
 }
