@@ -2,12 +2,12 @@
 
 A framework agnostic typing animation package built with vanilla JavaScript. Works with Vue.js, React, and everything else.
 
+![screen recording of js-type-text typing its own url, npmjs.com/js-type-text](js-type-text.gif)
+
 ## Installation
 ```bash
 npm install js-type-text
 ```
-
-![screen recording of js-type-text typing its own url, npmjs.com/js-type-text](js-type-text.gif)
 
 ### Usage
 ```js
