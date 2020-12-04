@@ -10,7 +10,6 @@ npm install js-type-text
 ![screen recording of js-type-text typing its own url, npmjs.com/js-type-text](js-type-text.gif)
 
 ### Usage
-
 ```js
 // import the package
 import jsTypeText from 'js-type-text';

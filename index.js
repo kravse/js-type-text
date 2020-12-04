@@ -10,7 +10,7 @@ module.exports = function (config, callback) {
     } else if (typedTitle.length === text.length) {
       clearInterval(interval);
       if (cursor !== false && config.cursorBlink !== false) {
-        var showCursor = false;
+        var showCursor = true;
         setInterval(function () {
           showCursor = !showCursor;
           callback(typedTitle + (showCursor ? "_" : ""));
