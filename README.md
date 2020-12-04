@@ -3,17 +3,19 @@
 A framework agnostic typing animation package built with vanilla JavaScript. Works with Vue.js, React, and everything else.
 
 ## Installation
-```
+```bash
 npm install js-type-text
 ```
 
+![screen recording of js-type-text typing its own url, npmjs.com/js-type-text](js-type-text.gif)
+
 ### Usage
 
-```
-#import the package
+```js
+// import the package
 import jsTypeText from 'js-type-text';
 
-# in your project
+// in your project
 jsTypeText({
   text: "Your Text Here"
 }, function (result) {
@@ -22,7 +24,7 @@ jsTypeText({
 ```
 
 ### Configuration
-```
+```js
 jsTypeText({
   text: "Your Text Here",
   speed: 110,
@@ -42,7 +44,7 @@ cursorSpeed | Number | Optional. Time in ms per cursor blink. Set to 0 to disabl
 ### Examples
 
 #### Vanilla JS
-```
+```js
 jsTypeText({
   text: "Welcome to my site"
 }, function (result) {
@@ -52,7 +54,7 @@ jsTypeText({
 
 
 #### Vue.js
-```
+```js
 <template>
   <h1>{{myTitle}}</h1>
 </template>
@@ -73,7 +75,7 @@ created: function () {
 
 #### React.js
 
-```
+```js
 class myPage extends React.Component{
   state = {
     myTitle:""
