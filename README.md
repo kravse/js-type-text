@@ -14,14 +14,10 @@ npm install js-type-text
 // import the package
 import jsTypeText from 'js-type-text';
 
-// in your project
-jsTypeText.start({
-  text: "Your Text Here"
-}, function (result) {
-  // Update your element here with the result value.
-});
+// start typing
+jsTypeText.start(config, callback);
 
-// stop typing and/or stop the cursor.
+// stop typing and/or cursor.
 jsTypeText.stop();
 
 ```
@@ -41,7 +37,7 @@ Value | Type | Description | Default
 text  | String | Required. The string to be typed. | N/A
 speed | Number | Optional. Time in ms per character typed. | 110
 cursor | Boolean | Optional. Show or hide cursor | TRUE
-cursorSpeed | Number | Optional. Time in ms per cursor blink. Set to 0 to disabled blink. | 350
+cursorSpeed | Number | Optional. Time in ms per cursor blink. Set to 0 to disable blink. | 350
 
 
 ### Examples
@@ -53,15 +49,16 @@ jsTypeText.start({
 }, function (result) {
   document.getElementById('myElement').innerHTML = result;
 });
+
+// optionally stop the typing and/or cursorpoint.
+jsTypeText.stop();
+
+
 ```
 
 
 #### Vue.js
-```html
-<template>
-  <h1>{{myTitle}}</h1>
-</template>
-```
+
 ```js
 data() {
   return: {
@@ -87,7 +84,6 @@ class myPage extends React.Component{
   state = {
     myTitle:""
   }
-
   componentDidMount () {
     jsTypeText.start({
       text: "Welcome to my site"
@@ -95,11 +91,9 @@ class myPage extends React.Component{
       this.setState({myTitle: result})
     }
   }
-
   componentWillUnmount () {
     jsTypeText.stop()
   }
-
   render(){
     return(<h1>{this.state.myTitle}</h1>)
   }
