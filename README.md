@@ -39,10 +39,10 @@ jsTypeText.start({
 Value | Type | Required | Description | Default
 ----- | ----- | ----- | ----- | -----
 text  | String | **Required** | The string to be typed. | N/A
-speed | Number | **Optional** | Time in ms per character typed. | 110
-cursor | Boolean | **Optional** | Show or hide cursor | TRUE
-cursorSpeed | Number | **Optional** | Time in ms per cursor blink. Set to 0 to disable blink. | 350
-cursorStyle | String | **Optional** | Can be **"vertical"** or **"horizontal"** or any html character you'd like. For example **"`&#9623;`"**. | "horizontal" (ie. the underscore symbol **`_`** )
+speed | Number | **Optional** | Time in ms per character typed. | **`110`**
+cursor | Boolean | **Optional** | Show or hide cursor | **`TRUE`**
+cursorSpeed | Number | **Optional** | Time in ms per cursor blink. Set to **`0`** to disable blink. | **`350`**
+cursorStyle | String | **Optional** | **`"vertical"`** or **`"horizontal"`** or any html character you'd like. For example **`"&#9623;"`**. | **`"horizontal"`** (ie. the underscore symbol **`_`** )
 
 
 _**Note:** Avoid jitter with custom HTML cursors by setting a CSS `line-height` value._
