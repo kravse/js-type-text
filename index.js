@@ -5,17 +5,14 @@ module.exports = {
     if (!config.text) return;
     var typedTitle = '';
     var cursor = config.cursor !== false;
-    let cursorStyle;
+    let cursorStyle = "_";
     if (config.cursorStyle) {
-      switch (config.cursorStyle.toLowerCase().replace(/\s/g, '')) {
-        case 'vertical':
-          cursorStyle = "&#x258D;";
-          break;
-        case 'horizontal':
-          cursorStyle = "_";
-          break;
-        default:
-          cursorStyle = config.cursorStyle;
+      if (config.cursorStyle.toLowerCase() === 'vertical') {
+        cursorStyle === "&#x258D;"
+      } else if (config.cursorStyle.toLowerCase() === 'horizontal') {
+        cursorStyle === "_"
+      } else {
+        cursorStyle = config.cursorStyle
       }
     }
 
@@ -25,7 +22,7 @@ module.exports = {
         callback(typedTitle + (cursor ? cursorStyle : ""));
       } else if (typedTitle.length === config.text.length) {
         clearInterval(interval);
-        if (cursor !== false && config.cursorBlink !== false) {
+        if (cursor !== false && config.cursorSpeed !== 0) {
           var showCursor = true;
           typeWriters.push(setInterval(function () {
             showCursor = !showCursor;
