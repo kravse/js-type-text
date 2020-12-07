@@ -4,6 +4,9 @@ A framework agnostic typing animation package built with vanilla JavaScript. Wor
 
 ![screen recording of js-type-text typing its own url, npmjs.com/js-type-text](js-type-text.gif)
 
+_This animation works with any font! However you will find that it looks its best when paired with [Monospaced fonts](https://en.wikipedia.org/wiki/Monospaced_font) as their letter widths are uniform._
+
+
 ## Installation
 ```bash
 npm install js-type-text
