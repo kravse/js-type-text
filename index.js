@@ -1,21 +1,35 @@
 var typeWriters = [];
+
 module.exports = {
   start(config, callback) {
     if (!config.text) return;
     var typedTitle = '';
     var cursor = config.cursor !== false;
+    let cursorStyle;
+    if (config.cursorStyle) {
+      switch (config.cursorStyle.toLowerCase().replace(/\s/g, '')) {
+        case 'vertical':
+          cursorStyle = "&#x258D;";
+          break;
+        case 'horizontal':
+          cursorStyle = "_";
+          break;
+        default:
+          cursorStyle = config.cursorStyle;
+      }
+    }
 
     var interval = setInterval(function () {
       if (typedTitle.length < config.text.length) {
         typedTitle = config.text.slice(0, typedTitle.length + 1);
-        callback(typedTitle + (cursor ? "_" : ""));
+        callback(typedTitle + (cursor ? cursorStyle : ""));
       } else if (typedTitle.length === config.text.length) {
         clearInterval(interval);
         if (cursor !== false && config.cursorBlink !== false) {
           var showCursor = true;
           typeWriters.push(setInterval(function () {
             showCursor = !showCursor;
-            callback(typedTitle + (showCursor ? "_" : ""));
+            callback(typedTitle + (showCursor ? cursorStyle : ""));
           }, config.cursorSpeed || 350));
         }
       }
